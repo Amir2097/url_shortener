@@ -18,7 +18,7 @@ jobs:
       ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
       SSH_HOST: ${{ secrets.SSH_HOST }}
       SSH_NAME: ${{ secrets.SSH_NAME }}
-      SSH_PASS: ${{ secrets.SSH_PASS }}
+      SSH_KEY: ${{ secrets.DEPLOY_SERVER_KEY }}
     services:
       postgres_main:
         image: postgres:12
@@ -63,5 +63,5 @@ jobs:
         with:
           host: ${{ env.SSH_HOST }}
           username: ${{ env.SSH_NAME }}
-          password: ${{ env.SSH_PASS }}
+          key: ${{ env.SSH_KEY }}
           script: expect /home/amir/url_shortener/pull.exp
