@@ -16,6 +16,9 @@ jobs:
       POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
       SECRET_KEY: ${{ secrets.SECRET_KEY }}
       ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
+      SSH_HOST: ${{ secrets.SSH_HOST }}
+      SSH_NAME: ${{ secrets.SSH_NAME }}
+      SSH_PASS: ${{ secrets.SSH_PASS }}
     services:
       postgres_main:
         image: postgres:12
