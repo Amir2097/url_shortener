@@ -61,7 +61,7 @@ jobs:
       - name: Деплой
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_NAME }}
-          password: ${{ secrets.SSH_PASS }}
+          host: ${{ env.SSH_HOST }}
+          username: ${{ env.SSH_NAME }}
+          password: ${{ env.SSH_PASS }}
           script: expect /home/amir/url_shortener/pull.exp
