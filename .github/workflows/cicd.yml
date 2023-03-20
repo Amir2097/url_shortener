@@ -61,4 +61,4 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          script: expect /home/adilet/url_shortener/pull.exp
+          script: expect /home/amir/url_shortener/pull.exp
