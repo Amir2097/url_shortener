@@ -58,10 +58,10 @@ jobs:
           DB_HOST: ${{ env.POSTGRES_HOST }}
           DB_PORT: ${{ env.POSTGRES_PORT }}
 
-      - name: Деплой
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ env.SSH_HOST }}
-          username: ${{ env.SSH_NAME }}
-          key: ${{ env.SSH_KEY }}
-          script: expect /home/amir/url_shortener/pull.exp
+#       - name: Деплой
+#         uses: appleboy/ssh-action@master
+#         with:
+#           host: ${{ env.SSH_HOST }}
+#           username: ${{ env.SSH_NAME }}
+#           key: ${{ env.SSH_KEY }}
+#           script: expect /home/amir/url_shortener/pull.exp
